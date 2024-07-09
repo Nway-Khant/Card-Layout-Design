@@ -1,8 +1,37 @@
-.card-container{
+:root {
+    --primary-color: rgb(5, 5, 5);
+    --card-border-radius: 7px;
+    --card-title-color: orange;
+    --card-category-color: seagreen;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}
+
+body{
+    font-family: serif;
+    font-size: 14px;
 
 }
 
+.card-container{
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 35px auto;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
 .card{
+
 
 }
 
@@ -11,7 +40,8 @@
 }
 
 .card-img{
-
+    width: 100%;
+    height: 250px;
 }
 
 .card-body{
@@ -31,7 +61,10 @@
 }
 
 .card-avatar{
-
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .card-author{
@@ -40,4 +73,10 @@
 
 .card-date{
     
+}
+
+@media (min-width: 1200px) {
+    .card-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
